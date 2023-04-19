@@ -77,7 +77,7 @@ public class UserController {
         }
         return ResponseEntity.notFound().build();
     }
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarId(@PathVariable Integer id){
         Optional<User>users =userService.findById(id);
         if(users.isPresent()){
